@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a9e-Qt-Wje">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,32 +18,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBt-LG-Iuh">
-                                <rect key="frame" x="95" y="388" width="224" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <rect key="frame" x="107" y="357" width="200" height="100"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="us"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ch7-zV-39o">
-                                <rect key="frame" x="95" y="244" width="224" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <rect key="frame" x="107" y="227" width="200" height="100"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="us"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-FO-0UW">
-                                <rect key="frame" x="95" y="100" width="224" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us" title="" imagePadding="0.0">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                </buttonConfiguration>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-FO-0UW">
+                                <rect key="frame" x="107" y="97" width="200" height="100"/>
+                                <state key="normal" image="us" backgroundImage="estonia">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XY3-FO-0UW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11.999999999999886" id="IqC-FT-ULO"/>
+                            <constraint firstItem="Ch7-zV-39o" firstAttribute="top" secondItem="XY3-FO-0UW" secondAttribute="bottom" constant="30" id="Isy-PZ-9Hb"/>
                             <constraint firstItem="SBt-LG-Iuh" firstAttribute="centerX" secondItem="Ch7-zV-39o" secondAttribute="centerX" id="JQz-pH-jCe"/>
-                            <constraint firstItem="XY3-FO-0UW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KAz-74-cuA"/>
-                            <constraint firstItem="Ch7-zV-39o" firstAttribute="top" secondItem="XY3-FO-0UW" secondAttribute="bottom" constant="30.000000000000227" id="WLS-tS-kcq"/>
+                            <constraint firstItem="XY3-FO-0UW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LDl-b2-QPC"/>
+                            <constraint firstItem="XY3-FO-0UW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pyw-Er-iEN"/>
+                            <constraint firstItem="XY3-FO-0UW" firstAttribute="centerX" secondItem="Ch7-zV-39o" secondAttribute="centerX" id="W0m-jE-Dwx"/>
                             <constraint firstItem="SBt-LG-Iuh" firstAttribute="top" secondItem="Ch7-zV-39o" secondAttribute="bottom" constant="29.999999999999773" id="kFn-jr-ovx"/>
-                            <constraint firstItem="Ch7-zV-39o" firstAttribute="centerX" secondItem="XY3-FO-0UW" secondAttribute="centerX" id="rbx-Iq-QrV"/>
+                            <constraint firstItem="XY3-FO-0UW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="kYK-Ly-XFY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IRG-qT-q4U"/>
@@ -76,6 +77,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="estonia" width="200" height="100"/>
         <image name="us" width="200" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

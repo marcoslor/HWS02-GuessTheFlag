@@ -33,6 +33,11 @@ class ViewController: UIViewController {
         button1.layer.borderColor = UIColor.lightGray.cgColor
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
+        
+        button1.tintColor = UIColor.clear
+        button2.tintColor = UIColor.clear
+        button3.tintColor = UIColor.clear
+
 
         askQuestion()
     }
@@ -41,10 +46,12 @@ class ViewController: UIViewController {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         
-        button1.setImage(UIImage(named: countries[0]), for: .normal)
-        button2.setImage(UIImage(named: countries[1]), for: .normal)
-        button3.setImage(UIImage(named: countries[2]), for: .normal)
+        button1.setBackgroundImage(UIImage(named: countries[0]), for: .normal)
+        button2.setBackgroundImage(UIImage(named: countries[1]), for: .normal)
+        button3.setBackgroundImage(UIImage(named: countries[2]), for: .normal)
         
+        button1.reloadInputViews()
+
         title = countries[correctAnswer].uppercased()
     }
 
