@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    func correctTitle (_ t: String) -> String{
+        return t.count == 2 ? t.uppercased() : t.capitalized
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +53,8 @@ class ViewController: UIViewController {
         button3.setBackgroundImage(UIImage(named: countries[2]), for: .normal)
         
         button1.reloadInputViews()
-
-        title = countries[correctAnswer].uppercased()
+        
+        title = "Find the flag: \(correctTitle(countries[correctAnswer])) | Score: \(score)"
     }
 
     
@@ -61,8 +64,12 @@ class ViewController: UIViewController {
             title = "Correct"
             score += 1
         } else {
-            title = "Wrong"
-            score -= 1
+            title = "Wrong. You chose the \(correctTitle(countries[sender.tag])) flag instead."
+            score -= score>=1 ? 1 : 0
+        }
+
+        if (score == 10){
+            title = "You won!"
         }
         
         let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
@@ -70,6 +77,10 @@ class ViewController: UIViewController {
         ac.addAction(UIAlertAction(title:"Continue", style: .default, handler: askQuestion))
     
         present(ac, animated: true)
+        
+        if (score ==  10){
+            score = 0
+        }
 
     }
 }
